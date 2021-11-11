@@ -1,1 +1,1 @@
-Background image and text animation using CSS
+Background animation and text animation using CSS
