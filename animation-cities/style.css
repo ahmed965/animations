@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("img/cities.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.list-cities {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  animation: changeColor 3s linear infinite;
+}
+
+.cities {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.city {
+  position: absolute;
+  top: 10px;
+  font-size: 50px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+
+.lightsalmon {
+  color: lightsalmon;
+}
+
+.mediumaquamarine {
+  color: mediumaquamarine;
+}
+
+.lightblue {
+  color: lightblue;
+}
+
+.city.show {
+  transform: scale(1);
+}
+
+@keyframes changeColor {
+  0% {
+    color: #b1cbbb;
+  }
+  25% {
+    color: #deeaee;
+  }
+
+  100% {
+    color: #eea29a;
+  }
+}
+
+@media (max-width: 1400px) {
+  body {
+    background-position: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .list-cities {
+    font-size: 38px;
+  }
+  .city {
+    font-size: 30px;
+  }
+}
